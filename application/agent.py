@@ -47,9 +47,12 @@ prompt_config = _cargar_yaml(PROMPT_PATH)
 from tools.Base_de_conocimiento import buscar_alpha_state
 from tools.Busqueda_internet import buscar_internet
 from tools.Hora_y_fecha import obtener_fecha_hora
-from tools.Google_Sheets import (
+from tools.Administracion_Google_Sheets import (
     consultar_total_inquilino,
     consultar_desglose_inquilino,
+)
+from tools.Apartamentos_Google_Sheets import (
+    buscar_apartamentos_disponibles,
 )
 
 # Histórico de conversación (PostgreSQL)
@@ -64,6 +67,7 @@ tools = [
     obtener_fecha_hora,             # Fecha y hora actual por zona horaria
     consultar_total_inquilino,      # Total mensual de un inquilino (Google Sheets)
     consultar_desglose_inquilino,   # Desglose de la cuota de un inquilino (Google Sheets)
+    buscar_apartamentos_disponibles, # Apartamentos disponibles (Google Sheets)
 ]
 
 # ============================================

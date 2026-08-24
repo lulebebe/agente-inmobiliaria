@@ -288,7 +288,8 @@ def consultar_total_inquilino(identificador: str) -> str:
             )
         return "\n".join(partes)
     except Exception as e:
-        return f"Error al consultar Google Sheets: {str(e)}"
+        print(f"❌ ERROR REAL GOOGLE SHEETS: {type(e).__name__}: {e}")
+        raise
 
 
 @tool
@@ -353,4 +354,5 @@ def consultar_desglose_inquilino(identificador: str) -> str:
 
         return "\n".join(partes)
     except Exception as e:
-        return f"Error al consultar Google Sheets: {str(e)}"
+        print(f"❌ ERROR REAL GOOGLE SHEETS: {type(e).__name__}: {e}")
+        raise
