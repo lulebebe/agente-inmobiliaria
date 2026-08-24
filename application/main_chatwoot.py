@@ -286,5 +286,8 @@ if __name__ == "__main__":
     print(f"🚫 No responde si tiene tag: {TAG_IA_OFF}")
     print("=" * 60)
     print()
+
+    port = int(os.getenv("PORT", "8080"))
+    uvicorn.run(app, host="0.0.0.0", port=port)
     
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    
